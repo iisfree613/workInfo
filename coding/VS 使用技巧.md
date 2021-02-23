@@ -15,6 +15,8 @@ Visual Studio 使用技巧：
 * 下一步：F10
 * 停止调试：Shift + F5
 * 全局搜索： Ctrl+Shift+F
+* 代码注释： Ctrl+K+C
+* 取消注释： Ctrl+K+U
 
 
 
