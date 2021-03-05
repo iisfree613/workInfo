@@ -41,3 +41,14 @@
 ## Coding
 
 ##### coding目录下记录对各种编程语言的学习，学习一样东西，最好的方式就是写出一本书来。
+
+[C++笔记](./coding/C++语言的学习.md)
+
+[MFC框架](./coding/MFC框架.md)
+
+[Visual Studio快捷键](./coding/VS 使用技巧.md)
+
+[Vue前端框架](./coding/VUE学习笔记.md)
+
+[Swift语句笔记](./coding/Swift 学习笔记.md)
+
