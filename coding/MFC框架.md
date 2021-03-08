@@ -281,7 +281,97 @@ SB_ENDSCROLL        8
 
 
 
+## 列表视图控件
 
+CListCtrl类内部的成员函数：
+
+  **UINT GetSelectedCount( ) const;**
+
+```  
+该函数返回列表视图控件中被选择列表项的数量。
+```
+
+**POSITION GetFirstSelectedItemPosition( ) const;**
+
+    获取列表视图控件中第一个被选择项的位置。返回的POSITION值可以用来迭代来获取其他选择项，可以当作参数传入下面的GetNextSelectedItem函数来获得选择项的索引。如果没有被选择项则返回NULL。
+
+**int GetNextSelectedItem(POSITION& pos) const;**
+
+``` 
+该函数获取由pos指定的列表项的索引，然后将pos设置为下一个位置的POSITION值。参数pos为之前调用GetNextSelectedItem或GetFirstSelectedItemPosition得到的POSITION值的引用。返回值就是pos指定列表项的索引。
+```
+
+ **int GetItemCount( ) const;**
+
+    获取列表视图控件中列表项的数量。
+
+**int InsertColumn(int nCol,const LVCOLUMN* pColumn );**
+**int InsertColumn(int nCol,LPCTSTR lpszColumnHeading,int nFormat = LVCFMT_LEFT,int nWidth = -1,int nSubItem = -1 );**
+
+    这两个函数用于在报表式列表视图控件中插入列。第一个函数中，nCol参数为插入列的索引，pColumn参数指向LVCOLUMN结构，其中包含了插入列的属性。第二个函数中，nCol参数也是插入列的索引，lpszColumnHeading参数为列标题字符串，nFormat参数为列中文本的对齐方式，可以是LVCFMT_LEFT、LVCFMT_RIGHT或LVCFMT_CENTER，nWidth参数为列宽，nSubItem为插入列对应列表子项的索引。两个函数在成功时都返回新列的索引，失败都返回-1。
+
+**BOOL DeleteColumn(int nCol);**
+
+       该函数用于删除列表视图控件中的某列。参数nCol为删除列的索引。删除成功则返回TRUE，失败返回FALSE。
+**int InsertItem(int nItem,LPCTSTR lpszItem);** 
+
+>  向列表视图控件中插入新的列表项。参数nItem为要插入项的索引，参数lpszItem为要插入项的标签字符串。如果插入成功则返回新列表项的索引，否则返回-1。 
+
+**BOOL DeleteItem(int nItem);**
+
+>   从列表视图控件中删除某个列表项。参数nItem指定了要删除的列表项的索引。删除成功则返回TRUE，否则返回FALSE。 
+
+**CString GetItemText(int nItem,int nSubItem) const;**
+
+>  获取指定列表项或列表子项的显示文本。参数nItem指定了列表项的索引，参数nSubItem指定了列表子项的索引。
+
+**BOOL SetItemText(int nItem,int nSubItem,LPCTSTR lpszText);**
+
+>  设置指定列表项或列表子项的显示文本。参数nItem和nSubItem同GetItemText。参数lpszText为要设置的显示文本字符串。如果设置成功则返回TRUE，否则返回FALSE。
+
+**DWORD_PTR GetItemData(int nItem) const;**
+
+> 该函数用于获取指定列表项的附加32位数据。参数nItem为列表项的索引。返回值就是由nItem指定列表项的附加32位数据。   
+
+**BOOL SetItemData(int nItem,DWORD_PTR dwData);**
+
+> 该函数用于为指定列表项设置附加32位是数据。参数nItem为列表项的索引，参数dwData为列表项的附加32位数据。
+
+ListCtrlBox
+
+View属性有4种风格：
+
+1. icon：图标风格
+2. Small icon：小图标风格
+3. List：列表风格
+4. Report：报表风格（表格视图）
+
+CListCtrl::SetExtendedStyle
+
+列表视图控件用法：
+
+``` C ++
+m_ProgramList.SetExtendedStyle(m_ProgramList.GetExtendedStyle() | LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES | LVS_EX_CHECKBOXES);
+```
+
+列表视图控件的风格类型:
+
+``` 
+   LVS_EX_GRIDLINES //绘制表格,网格线。
+　　LVS_EX_SUBITEMIMAGES//子项目图标列表
+　　LVS_EX_CHECKBOXES //带复选框
+　　LVS_EX_TRACKSELECT //自动换行
+　　LVS_EX_HEADERDRAGDROP//报表头可以拖拽
+　　LVS_EX_FULLROWSELECT //选择整行，允许选择整行。
+   LVS_EX_ONECLICKACTIVATE//单击激活单击选中项目。
+　　LVS_EX_TWOCLICKACTIVATE//双击激活
+　　LVS_EX_FLATSB//扁平滚动条
+　　LVS_EX_REGIONAL
+　　LVS_EX_INFOTIP
+　　LVS_EX_UNDERLINEHOT
+　　LVS_EX_UNDERLINECOLD
+　　LVS_EX_MULTIWORKAREAS//多工作区
+```
 
 
 

@@ -46,9 +46,9 @@
 
 [MFC框架](./coding/MFC框架.md)
 
-[Visual Studio快捷键](./coding/VS 使用技巧.md)
+[Visual Studio快捷键](./coding/VisualStudio使用技巧.md)
 
 [Vue前端框架](./coding/VUE学习笔记.md)
 
-[Swift语句笔记](./coding/Swift 学习笔记.md)
+[Swift语句笔记](./coding/Swift学习笔记.md)
 
