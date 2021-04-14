@@ -146,3 +146,9 @@ QString data = QString("%1 %2 %3 ").arg(“1”)
 ### 数据类型定义
 
 ![数据类型定义](../img/qt5_2.png)
+
+
+
+# socket编程
+
+ReadyRead()信号：
