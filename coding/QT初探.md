@@ -133,6 +133,12 @@ QString data = QString("%1 %2 %3 ").arg(“1”)
 // .arg()完成字符串的格式化
 ```
 
+#####  用于显示中文的宏
+
+``` C++
+#define tr(s) (QString::fromLocal8Bit(s)) // tr为自定义
+```
+
 
 
 
