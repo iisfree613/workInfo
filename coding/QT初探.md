@@ -158,3 +158,11 @@ QString data = QString("%1 %2 %3 ").arg(“1”)
 # socket编程
 
 ReadyRead()信号：
+
+### Windows下Qt使用htons, htonl, ntohs, ntohl
+
+1. `pro文件`加上：`LIBS += -lws2_32` 
+2. 源代码包含头文件：`#include <winsock2.h>`
+
+[【socket编程为什么需要htons(), ntohl(), ntohs()，htons() 函数】](https://blog.csdn.net/Kk_01110001B/article/details/90731792)
+

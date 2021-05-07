@@ -15,3 +15,9 @@ QLabel
 6.  Qt::AlignButton: 居下对齐
 7.  Qt::AlignVCenter: 垂直方向，居中
 8.  Qt::AlignCenter: 水平，垂直方向居中
+
+
+
+按键捕获：
+
+Qt中的回车键对应两个键值：Qt::Key_Enter、Qt::Key_Return。
