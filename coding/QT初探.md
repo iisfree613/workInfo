@@ -139,7 +139,9 @@ QString data = QString("%1 %2 %3 ").arg(“1”)
 #define tr(s) (QString::fromLocal8Bit(s)) // tr为自定义
 ```
 
+##### 静态函数在给给定时间后执行
 
+用法：`QTimer::singleShot(2*1000, this, &updateGateway::on_pBtn_sendOrder_clicked);`
 
 
 
