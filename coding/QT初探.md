@@ -131,6 +131,7 @@ c_str()
 QString data = QString("%1 %2 %3 ").arg(“1”)
             .arg(“2”).arg(“3”);
 // .arg()完成字符串的格式化
+// .arg(str, length) 所接受的第二个参数，可代表所占宽度
 ```
 
 #####  用于显示中文的宏
@@ -143,7 +144,11 @@ QString data = QString("%1 %2 %3 ").arg(“1”)
 
 用法：`QTimer::singleShot(2*1000, this, &updateGateway::on_pBtn_sendOrder_clicked);`
 
-
+###### QByteArray 转换为`char * `类型
+```C++
+QByteArray array;
+char *pt = reinterpret_cast<char *>(array.data());
+```
 
 # QT Cteator
 
@@ -167,4 +172,12 @@ ReadyRead()信号：
 2. 源代码包含头文件：`#include <winsock2.h>`
 
 [【socket编程为什么需要htons(), ntohl(), ntohs()，htons() 函数】](https://blog.csdn.net/Kk_01110001B/article/details/90731792)
+
+
+
+## toggled 与 triggered 信号的区别
+
+* toggle在实物上有开关的意思，两头表示两个状态：开和关。
+  * 使用该信号的控件需要将setCheckalbe属性设置为true;
+* trigger 有触发的意思，一次性的，点击后无法改变状态。
 
