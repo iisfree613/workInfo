@@ -7,7 +7,9 @@
 * 转到定义（F12）
 * 向后导航：Ctrl+ -
 * 向前导航：Ctrl+shift+-
-* 文件切换（Ctrl+K+O）
+* 文件切换（Ctrl+K+O） *完成头文件和源文件之间的切换*
+* 添加书签：Ctrl + K + K  *方便多文件切换阅读代码*
+* 调出书签栏： Ctrl + K + W
 * 字体放大：Ctrl+Shift+ .
 * 字体缩小：Ctrl+Shift+ ,
 * 全局搜索： Ctrl+Shift+F
