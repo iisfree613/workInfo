@@ -387,3 +387,10 @@ m_ProgramList.SetExtendedStyle(m_ProgramList.GetExtendedStyle() | LVS_EX_FULLROW
 
 《MFC Windows程序设计 第2版》
 
+
+
+# 遇到的问题记录
+
+### MSVC error C2039: “mutex”: 不是“std”的成员
+
+* `#include "stdafx.h"` 把这个文件放在出错文件的最上方引入。必须是第一个先引入的头文件

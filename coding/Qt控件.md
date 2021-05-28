@@ -1,4 +1,4 @@
-QLabel
+### QLabel
 
 对齐方式：
 
@@ -18,6 +18,36 @@ QLabel
 
 
 
-按键捕获：
+### 按键捕获：
 
-Qt中的回车键对应两个键值：Qt::Key_Enter、Qt::Key_Return。
+###### Qt中的回车键对应两个键值：Qt::Key_Enter、Qt::Key_Return。
+
+
+
+### QListWidget
+```
+// 构造函数
+QListWidget( Qwidget *parent)
+// 添加条目
+void QListWidget::addItem(QListWidgetItem *item)
+void QListWidget::addItem(const QString & label)
+void QListWidget::addItem(const QStringList & labels)
+void QListWidget::addItem(int row, QListWidgetItem *item) // 插入条目到第row行
+void QListWidget::addItem(int row, const QString & label)
+void QListWidget::addItem(int row, const QStringList & labels)
+
+// 获取控件里面条目计数
+int QListWidget::count() const
+
+// 删除条目
+QListWidgetItem *QListWidget::takeItem(int row) // 根据行号移除一个条目，并返回该条目的指针，如果不合法则返回NULL指针
+
+// 清空整个列表控件
+void QListWidget::clear()
+
+// 条目访问函数
+QListWidgetItem *QListWdiget::item(int row) const // 根据行号获取条目对象的指针
+int QListWidget::row(const QListWidgetItem * item) const // 已知列表控件内含条目对象指针，反查当前行号
+```
+
+> QListWidgetItem 是一个纯数据类，不是控件，没有基类，也没有信号和槽函数。
