@@ -318,7 +318,7 @@ enum { floatPrec=6, doublePrec=10 };
 
 ##### 面向对象的三大特征：封装、继承、多态。
 
-![面向对象基本特征](C:\Users\613\Pictures\Saved Pictures\面向对象基本特征.png)
+![面向对象基本特征](../img/面向对象基本特征.png)
 
 ## 封装
 
@@ -390,7 +390,7 @@ enum { floatPrec=6, doublePrec=10 };
 * C++中指向类的指针：如同指向结构的指针。实际上类可以看成是一个带有函数的结构。
 * C++类的静态成员：类的数据成员和函数成员都可以被声明为静态的。
 
-![friend_class](..\img\friend_class.png)
+![friend_class](../img/friend_class.png)
 
 #### 函数的返回值类型是类的引用类型，在成员函数内部可以直接使用类的数据成员。
 
