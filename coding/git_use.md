@@ -70,3 +70,8 @@ git fetch origin [remote tag name]
 git show [tag name]
 ```
 
+
+
+## Git log
+
+* git reflog:  显示所有关于HEAD的历史
