@@ -35,9 +35,9 @@ To iisfree.gitee:leelongcrazy/mushroom.git
 ## Git拉取远程分支的代码到本地
 
 ``` bash
-# 1.
+# 1. 从远程分支下载对象和引用
 git fetch origin remote_branch_name
-# 2. 
+# 2. 从远程分支获取对象并合并
 git pull origin remote_brach_name
 ```
 
@@ -75,3 +75,13 @@ git show [tag name]
 ## Git log
 
 * git reflog:  显示所有关于HEAD的历史
+
+
+
+## Git 修改 .gitignore后生效
+```
+git rm -r --cached . # 清除缓存
+git add .
+git commit -m "update .gitignore"
+git push origin master
+```

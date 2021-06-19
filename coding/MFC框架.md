@@ -394,3 +394,17 @@ m_ProgramList.SetExtendedStyle(m_ProgramList.GetExtendedStyle() | LVS_EX_FULLROW
 ### MSVC error C2039: “mutex”: 不是“std”的成员
 
 * `#include "stdafx.h"` 把这个文件放在出错文件的最上方引入。必须是第一个先引入的头文件
+
+
+### 将string 类型 转换为CString 类型字符乱码的问题
+##### 字符乱码的转换方式：
+```
+string str1 = "Hello world.";
+CString cStr;
+cStr.Format(_T("%s"), str1.c_str());
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 正常显示的代码；
+string str1 = "Hello world.";
+CA2T temp(st1.c_str());
+CString cStr = (LPCTSTR)temp;
+```
