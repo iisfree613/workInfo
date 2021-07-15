@@ -140,5 +140,18 @@ string getRemoteMac(char * localIP, char * remoteIP)
 
 ```
 
+## 需求：将int类型转化为高,低位两个字节存储
+int类型默认为4个字节，32位存储；
+首先将int类型转换为`unsigned short`类型，2个字节，16位存储；
+然后分别获取高位，低位存储
+代码如下：
+```C++
+	BYTE data[50]; 
+    memset(data, 0, sizeof(data));
+    int num = 1024;
+unsigned short temp = (unsigned short)num;
+	data[0] = temp & 0xff; // 获取低位
+    data[1] = temp >> 8;  // 右移一个字节，获取高位
 
+```
 
